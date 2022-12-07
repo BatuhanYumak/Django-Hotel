@@ -6,8 +6,8 @@ def index(request):
   template = loader.get_template('index.html')
   return HttpResponse(template.render())
  
-# from members.models import Film, Genre
-# import csv
+def hotel (request):
+  return render(request, 'hotel.html')
 
 
  
