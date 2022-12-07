@@ -1,0 +1,16 @@
+footer {
+    bottom: 0;
+    position: absolute;
+}
+
+.blueDarker {
+    background-color: #0077B6;
+}
+
+.bgDarkest {
+    background-color: #023E8A;
+}
+
+.bgBack {
+    background-color: #CAF0F8;
+}
