@@ -10,4 +10,5 @@ def hotel (request):
   return render(request, 'hotel.html')
 
 
+
  
