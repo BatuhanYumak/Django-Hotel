@@ -32,7 +32,7 @@ function playAnim() {
         }
         // call itself
         playAnim()
-    }, 95)
+    }, 70)
 }
 // start animation
 playAnim()
