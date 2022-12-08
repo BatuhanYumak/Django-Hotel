@@ -8,10 +8,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="{% static 'style.css' %}">
+    <script src="{% static 'script.js' %}"></script>   
 
     <title>Maykin_hotel</title>
 </head>
 <body class="">
+
 <!--Navabr-->
 
     <nav class="bg-white px-2 sm:px-4 py-2.5 dark:bg-white-900  w-full z-20 top-0 left-0 border-b border-white-200 dark:border-white-600">
@@ -42,12 +44,10 @@
 
       <!--About Maykin-->
     <h1 class="font-bold text-center text-3xl p-2">Maykin Media</h1>
+    <div class="typeText"></div>
 
-
-    <p class="text-center text-wrap p-4">
-        Maykin Media is het betrouwbaare site waar u uw hotel kunt boeken over heel de wereld. Het is ook 1 van de meest bezochte site over heel de wereld. 
-        Door onze snelle service kunt u binnen enkle minuten uw hotel gaan boeken. Boek snel dus je hotel bij Maykin Media. Veilig en snel.
-      </p>
+        <div id="text_writer" class="text-center text-wrap p-4" class="typeText"></div>
+    
 
 <!--Footer-->
       <footer class="text-center lg:text-left blueDarker text-white">
