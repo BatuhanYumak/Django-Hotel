@@ -9,6 +9,8 @@ def index(request):
 def hotel (request):
   return render(request, 'hotel.html')
 
-
+def amsterdam(request):
+      return render(request, 'amsterdam.html')
+    
 
  
