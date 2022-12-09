@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="{% static 'style.css' %}" />
+    {% comment %} Afgezien dat HTML  door een server wordt gegenereerd, hebben webapplicaties over het algemeen extra bestanden nodig, zoals afbeeldingen, JavaScript of CSS, die nodig zijn om de volledige webpagina weer te geven. {% endcomment %}
 
     <title>Amsterdam</title>
 </head>
@@ -36,7 +37,8 @@
       </nav>
  
       <div class="flex justify-center  space-x-4 border-dotted border-2">
-        
+                {% comment %} Met de voor for loop display je wat je wilt vanuit je database {% endcomment %}
+
         {% for test in barcelona %}
         <h1>{{test.hotel_name}}</h1>
         <h1></h1>

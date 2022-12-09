@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="{% static 'style.css' %}" />
+    {% comment %} Afgezien dat HTML  door een server wordt gegenereerd, hebben webapplicaties over het algemeen extra bestanden nodig, zoals afbeeldingen, JavaScript of CSS, die nodig zijn om de volledige webpagina weer te geven. {% endcomment %}
 
     <title>Amsterdam</title>
 </head>
@@ -25,6 +26,8 @@
         <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
           <ul class="flex flex-col p-4 mt-4 mr-40 border border-gray-100 rounded-lg bg-white-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white">
             <li>
+                                {% comment %} Door {%  %} kan ik hyper links gebruiken in Django {% endcomment %}
+
               <a href="{% url 'index' %}"  class="block py-2 pl-3 pr-4 text-white bg-white-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white" aria-current="page">Home</a>
             </li>
             <li>
@@ -36,7 +39,8 @@
       </nav>
  
       <div class="flex justify-center  space-x-4 border-dotted border-2">
-        
+                {% comment %} Met de voor for loop display je wat je wilt vanuit je database {% endcomment %}
+
         {% for test in bangkok %}
         <h1>{{test.hotel_name}}</h1>
         <h1></h1>

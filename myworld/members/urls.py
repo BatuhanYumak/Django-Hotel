@@ -1,6 +1,6 @@
 from django.urls import path
 from . import views
-
+# Hier maak path's aan. Dit gebruik ik voor om de gebruiker naar een andere pagina te sturen.
 urlpatterns = [
     path('', views.index, name='index'),
     path('hotels/', views.hotel, name='hotel'),
@@ -11,12 +11,6 @@ urlpatterns = [
     path('barcelona/', views.barcelona, name='bar'),
     path('berlijn/', views.berlijn, name='ber'),
 
-
-
-
-
-    # path('antwerpen/', )
-    # path('hotels/<int:hotel_id>', views.hotel_detail, name='hotel_detail'),
 ]
 
 

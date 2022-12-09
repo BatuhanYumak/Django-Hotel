@@ -6,6 +6,8 @@ def index(request):
   template = loader.get_template('index.html')
   return HttpResponse(template.render())
  
+# Hier haal ik data uit de database en vervolgens dat te displayen op mijn gewenste pagina
+
 def hotel (request):
   return render(request, 'hotel.html')
 
