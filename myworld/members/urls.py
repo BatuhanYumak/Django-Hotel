@@ -19,5 +19,6 @@ urlpatterns = [
     # path('hotels/<int:hotel_id>', views.hotel_detail, name='hotel_detail'),
 ]
 
+
 # urlpatterns(r'^$', 'index', name='index'),
 # urlpatterns(r'^blog$', 'horel', name='blog'),
