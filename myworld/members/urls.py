@@ -9,8 +9,14 @@ urlpatterns = [
     path('athene/', views.athene, name='ath'),
     path('bangkok/', views.bangkok, name='bak'),
     path('barcelona/', views.barcelona, name='bar'),
-    path('berlijn/', views.berlijn, name='ber')
+    path('berlijn/', views.berlijn, name='ber'),
 
+
+
+
+
+    # path('antwerpen/', )
+    # path('hotels/<int:hotel_id>', views.hotel_detail, name='hotel_detail'),
 ]
 
 
