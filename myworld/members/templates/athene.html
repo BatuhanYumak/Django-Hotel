@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+
+    <title>Amsterdam</title>
+</head>
+<body>
+    <nav class="bg-white px-2 sm:px-4 py-2.5 dark:bg-white-900  w-full z-20 top-0 left-0 border-b border-white-200 dark:border-white-600">
+        <div class="container flex flex-wrap items-center justify-between mx-auto">
+        <a href="https://www.maykinmedia.nl/nl/" class="flex items-center">
+            <img src="{% static 'maykin_logo.png' %}" class="h-6 mr-3 sm:h-9" alt="Flowbite Logo">
+        </a>
+        <div class="flex md:order-2">
+            <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
+              <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+          </button>
+        </div>
+        <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+          <ul class="flex flex-col p-4 mt-4 mr-40 border border-gray-100 rounded-lg bg-white-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white">
+            <li>
+              <a href="{% url 'index' %}"  class="block py-2 pl-3 pr-4 text-white bg-white-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white" aria-current="page">Home</a>
+            </li>
+            <li>
+              <a href="{% url 'hotel' %}"class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-gray dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Hotels</a>
+            </li>
+          </ul>
+        </div>
+        </div>
+      </nav>
+ 
+      <div class="flex justify-center  space-x-4 border-dotted border-2">
+        
+        {% for test in athene %}
+        <h1>{{test.hotel_name}}</h1>
+        <h1></h1>
+        {% endfor %}
+      </div>
+      {% comment %} Footer {% endcomment %}
+<footer class="text-center lg:text-left blueDarker text-white">
+
+    <div class="mx-6 py-10 text-center md:text-left">
+        <div class="grid grid-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="">
+                <h6 class="
+            uppercase
+            font-semibold
+            mb-4
+            flex
+            items-center
+            justify-center
+            md:justify-start
+          ">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="cubes" class="w-4 mr-3" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    </svg>
+                    <a href="https://www.maykinmedia.nl/nl/">Maykin Media</a>
+                </h6>
+                <p>
+                    U kunt terecht voor een afspraak bij ons op locatie in Amsterdam. Via de bijgevoegde contact gegevens.
+                </p>
+            </div>
+            <div class="">
+                <h6 class="uppercase font-semibold mb-4 flex justify-center md:justify-start">
+                    Contact
+                </h6>
+                <p class="flex items-center justify-center md:justify-start mb-4">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="envelope" class="w-4 mr-4" role="img" viewBox="0 0 512 512">
+                        <path fill="currentColor" d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z">
+                        </path>
+                    </svg>
+                    info@maykinmedia.nl
+                </p>
+                <p class="flex items-center justify-center md:justify-start mb-4">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="phone" class="w-4 mr-4" role="img"  viewBox="0 0 512 512">
+                        <path fill="currentColor" d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z">
+                        </path>
+                    </svg>
+                    +020 753 0523
+                </p>
+            </div>
+        </div>
+    </div>
+    <hr>
+ 
+</footer>
+
+</body>
+</html>

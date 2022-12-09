@@ -1,0 +1,41 @@
+footer {
+    bottom: 0;
+    position: absolute;
+}
+
+.blueDarker {
+    background-color: #0077B6;
+}
+
+.bgDarkest {
+    background-color: #023E8A;
+}
+
+.bgBack {
+    background-color: #CAF0F8;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    
+  }
+  
+  td, th {
+    border: 20px solid #0077B6;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #0077B6;
+  }
+.ams {
+  border-style: dotted;
+}
+
+.bitch * {
+  display: flex;
+  flex-direction: row;
+}
