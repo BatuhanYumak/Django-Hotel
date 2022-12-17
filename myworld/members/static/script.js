@@ -1,4 +1,4 @@
-var textToBeTyped = "Maykin Media is een betrouwbaare site waar u uw hotel kunt boeken over heel de wereld. Het is ook 1 van de meest bezochte site over heel de wereld."
+var textToBeTyped = "Hotel is een betrouwbaare site waar u uw hotel kunt boeken over heel de wereld. Het is ook 1 van de meest bezochte site over heel de wereld."
 "Door onze snelle service kunt u binnen enkle minuten uw hotel gaan boeken. Boek snel dus je hotel bij Maykin Media. Veilig en snel."
 var index = 0, isAdding = true
 

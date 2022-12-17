@@ -39,3 +39,8 @@ table {
   display: flex;
   flex-direction: row;
 }
+#ibis {
+ margin-left: 150px;
+  width: 400px;
+  height: 100px;
+}
