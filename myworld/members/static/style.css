@@ -35,12 +35,24 @@ table {
   border-style: dotted;
 }
 
-.bitch * {
-  display: flex;
-  flex-direction: row;
-}
-#ibis {
+
+#hotel1 {
+  border-radius: 25px;
  margin-left: 150px;
-  width: 400px;
-  height: 100px;
+  width: 500px;
+  height: 300px;
+}
+
+.top-left {
+  color: white;
+  position: absolute;
+  top: 200px;
+  left: 175px;
+}
+
+.bottom-left {
+  color: white;
+  position: absolute;
+  top: 450px;
+  left: 180px;
 }
