@@ -11,3 +11,10 @@ class Informatie(models.Model):
 
     def __str__(self):
         return self.city_name
+
+class Winkelwagen(models.Model):
+    winkelwagen_id = models.CharField(max_length=100)
+
+
+    def __str__(self):
+        return self.winkelwagen_name
