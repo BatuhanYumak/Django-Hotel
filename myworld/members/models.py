@@ -14,7 +14,7 @@ class Informatie(models.Model):
     def __str__(self):
         return self.city_name
 
-class RegistrationForm(forms.Form):
+class RegistrationForm(models.Model):
     username = forms.CharField(max_length=30)
     email = forms.EmailField()
     password = forms.CharField(widget=forms.PasswordInput)
