@@ -10,8 +10,10 @@ urlpatterns = [
     path('bangkok/', views.bangkok, name='bak'),
     path('barcelona/', views.barcelona, name='bar'),
     path('berlijn/', views.berlijn, name='ber'),
+    path('login/', views.login_view, name='login'),
 
 ]
+
 
 
 

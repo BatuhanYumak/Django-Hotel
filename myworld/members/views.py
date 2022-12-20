@@ -69,3 +69,14 @@ def login_view(request):
             return render(request, 'login.html', {'error': 'Invalid login credentials'})
     else:
         return render(request, 'login.html')
+
+from django.contrib.auth import login
+from django.shortcuts import render, redirect
+
+def register_view(request):
+    if request.method == 'POST':
+        form = RegistrationForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            login(request, user)
+            return redirect('home')
