@@ -69,6 +69,10 @@ TEMPLATES = [
     },
 ]
 
+
+LOGIN_REDIRECT_URL = "/"
+
+
 WSGI_APPLICATION = 'myworld.wsgi.application'
 
 
@@ -78,12 +82,12 @@ WSGI_APPLICATION = 'myworld.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME'  :  'maykin_test',
-        'USER'  :   'bit_academy',
-        'PASSWORD' : 'bit_academy',
-        'HOST' : '127.0.0.1',
-        'PORT' : '3306',
-        'OPTION' : {
+        'NAME':  'maykin_test',
+        'USER':   'bit_academy',
+        'PASSWORD': 'bit_academy',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
+        'OPTION': {
             'init_command': "SET sql_mode='STRICT_TRANS_TABLE"
         }
     }

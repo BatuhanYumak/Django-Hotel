@@ -14,5 +14,4 @@ urlpatterns = [
 ]
 
 
-# urlpatterns(r'^$', 'index', name='index'),
-# urlpatterns(r'^blog$', 'horel', name='blog'),
+

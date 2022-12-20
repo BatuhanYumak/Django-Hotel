@@ -12,9 +12,12 @@ class Informatie(models.Model):
     def __str__(self):
         return self.city_name
 
-class Winkelwagen(models.Model):
-    winkelwagen_id = models.CharField(max_length=100)
+from django.db import models
 
-
+class User(models.Model):
+    username = models.CharField(max_length=30, unique=True)
+    email = models.EmailField(unique=True)
+    password = models.CharField(max_length=100)
+    
     def __str__(self):
-        return self.winkelwagen_name
+        return self.username
