@@ -7,6 +7,10 @@
     <title>Sign up</title>
 </head>
 <body>
-    
+    <form method="post" action="{% url 'signup' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Sign up">
+      </form>
 </body>
 </html>
