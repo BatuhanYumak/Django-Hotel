@@ -15,7 +15,7 @@ class Informatie(models.Model):
         return self.city_name
 
 class RegistrationForm(models.Model) :
-    username = forms.CharField(max_length=30)
-    email = forms.EmailField()
-    password = forms.CharField(widget=forms.PasswordInput)
-    password_confirm = forms.CharField(widget=forms.PasswordInput)
+    username = models.CharField(max_length=30, default='SOME STRING')
+    email = models.EmailField(max_length=30, default='SOME STRING')
+    password = models.CharField(max_length=30, default='SOME STRING')
+    password_confirm = models.CharField(max_length=30, default='SOME STRING')

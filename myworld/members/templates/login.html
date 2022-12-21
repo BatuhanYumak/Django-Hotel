@@ -10,14 +10,13 @@
     
     <form method="post" action="{% url 'login' %}">
         {% csrf_token %}
-        <label for="username">Username:</label>
+        <label for="username">Gebruikersnaam:</label>
         <input type="text" name="username" required>
         <br>
-        <label for="password">Password:</label>
+        <label for="password">Wachtwoord:</label>
         <input type="password" name="password" required>
         <br>
-        <input type="checkbox" name="remember" id="remember">
-        <label for="remember">Remember me</label>
+ 
         <br>
         <button type="submit">Log in</button>
 
