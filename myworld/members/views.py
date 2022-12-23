@@ -99,7 +99,7 @@ def login_view(request):
             return render(request, 'inlog.html', {'error': 'Invalid login credentials'})
     else:
         return render(request, 'inlog.html')
-
+# Registratie pagina back-end
 def signup_view(request):
 
     if request.method == 'POST':
