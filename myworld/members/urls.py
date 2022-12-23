@@ -1,5 +1,8 @@
-from django.urls import path
+from django.urls import path, include
+from pathlib import Path
 from . import views
+from pprint import pprint
+
 # Hier maak path's aan. Dit gebruik ik voor om de gebruiker naar een andere pagina te sturen.
 urlpatterns = [
     path('', views.index, name='index'),
@@ -10,9 +13,6 @@ urlpatterns = [
     path('bangkok/', views.bangkok, name='bak'),
     path('barcelona/', views.barcelona, name='bar'),
     path('berlijn/', views.berlijn, name='ber'),
-    path('login/', views.login_view, name='login'),
-    path('signup/', views.signup_view, name='signup'),
-
 ]
 
 

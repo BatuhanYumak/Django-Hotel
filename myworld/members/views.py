@@ -4,7 +4,6 @@ from django.template import loader
 from .models import *
 from django.contrib.auth.models import User
 from pprint import pprint
-from .forms import UserForm
 
 def index(request):
   template = loader.get_template('index.html')
@@ -100,15 +99,15 @@ def login_view(request):
     else:
         return render(request, 'inlog.html')
 # Registratie pagina back-end
-def signup_view(request):
+# def signup_view(request):
 
-    if request.method == 'POST':
-        form = UserForm(request.POST)
+#     if request.method == 'POST':
+#         form = UserForm(request.POST)
 
-        if form.is_valid():
-            user = form.save()
-            login(request, user)
-            return redirect('index')
-    else:
-        form = RegistrationForm()
-    return render(request, 'signup.html', {'form': form})
+#         if form.is_valid():
+#             user = form.save()
+#             login(request, user)
+#             return redirect('index')
+#     else:
+#         form = RegistrationForm()
+#     return render(request, 'signup.html', {'form': form})
