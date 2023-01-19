@@ -57,6 +57,11 @@ def berlijn(request):
     return render(request, 'berlijn.html', context)
 
 
+def signup(request):
+    # your logic here
+    return render(request, 'signup.html')
+    
+
 from django.contrib.auth import authenticate, login
 from django.shortcuts import render, redirect
 

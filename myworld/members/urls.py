@@ -13,6 +13,7 @@ urlpatterns = [
     path('bangkok/', views.bangkok, name='bak'),
     path('barcelona/', views.barcelona, name='bar'),
     path('berlijn/', views.berlijn, name='ber'),
+    path('signup/', views.signup, name='sign')
 ]
 
 
