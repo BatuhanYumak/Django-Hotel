@@ -2,9 +2,6 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
 from .models import *
-from django.contrib.auth.models import User
-from pprint import pprint
-
 def index(request):
   template = loader.get_template('index.html')
   return HttpResponse(template.render())
@@ -57,11 +54,6 @@ def berlijn(request):
     return render(request, 'berlijn.html', context)
 
 
-def signup(request):
-    # your logic here
-    return render(request, 'signup.html')
-    
-
 from django.contrib.auth import authenticate, login
 from django.shortcuts import render, redirect
 
@@ -81,38 +73,25 @@ def login_view(request):
 from django.contrib.auth import login
 from django.shortcuts import render, redirect
 
-def login_view(request):
+def signup_view(request):
     if request.method == 'POST':
         form = RegistrationForm(request.POST)
         if form.is_valid():
             user = form.save()
             login(request, user)
-            return redirect('index')
+            return redirect('home')
  
  
  
-def login_view(request):
+def signup_view(request):
     if request.method == 'POST':
         username = request.POST['username']
         password = request.POST['password']
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
-            return redirect('index')
+            return redirect('home')
         else:
-            return render(request, 'inlog.html', {'error': 'Invalid login credentials'})
+            return render(request, 'signup.html', {'error': 'Invalid login credentials'})
     else:
-        return render(request, 'inlog.html')
-# Registratie pagina back-end
-# def signup_view(request):
-
-#     if request.method == 'POST':
-#         form = UserForm(request.POST)
-
-#         if form.is_valid():
-#             user = form.save()
-#             login(request, user)
-#             return redirect('index')
-#     else:
-#         form = RegistrationForm()
-#     return render(request, 'signup.html', {'form': form})
+        return render(request, 'signup.html')

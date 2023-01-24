@@ -1,4 +1,4 @@
-# Django Hotel Read.me 
+# Maykin Media Read.me 
 
 
 ## Vereisten
