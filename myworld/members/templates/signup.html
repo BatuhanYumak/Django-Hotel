@@ -7,7 +7,7 @@
     <title>Sign up</title>
 </head>
 <body>
-    <form method="post" action="{% url 'login' %}">
+    <form method="post" action="{% url 'signup' %}">
         {% csrf_token %}
         {{ form.as_p }}
         {% comment %} <label for="username">Gebruikersnaam:</label>

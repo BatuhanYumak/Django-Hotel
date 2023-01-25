@@ -7,6 +7,8 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
 from django.contrib.auth import authenticate
 
+from django import forms
+from django.contrib.auth.models import User
 def index(request):
   template = loader.get_template('index.html')
   return HttpResponse(template.render())
@@ -68,7 +70,7 @@ def login_view(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
-            return redirect('home')
+            return redirect('index')
         else:
             return render(request, 'login.html', {'error': 'Invalid credentials'})
     else:
@@ -80,8 +82,13 @@ def signup_view(request):
         if form.is_valid():
             user = form.save()
             login(request, user)
-            return redirect('home')
+            return redirect('login')
     else:
         form = UserCreationForm()
     return render(request, 'signup.html', {'form': form})
-                  
+
+
+# class RegistrationForm(forms.ModelForm):
+#     class Meta:
+#         model = User
+#         fields = ('username', 'password')
