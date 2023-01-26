@@ -6,6 +6,7 @@ from .models import RegistrationForm
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
 from django.contrib.auth import authenticate
+from django.contrib.auth import logout
 
 from django import forms
 from django.contrib.auth.models import User
@@ -87,6 +88,10 @@ def signup_view(request):
         form = UserCreationForm()
     return render(request, 'signup.html', {'form': form})
 
+# logout system
+def logout_view(request):
+    logout(request)
+    return redirect('index')       
 
 # class RegistrationForm(forms.ModelForm):
 #     class Meta:
