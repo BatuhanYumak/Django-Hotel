@@ -5,4 +5,3 @@ from .models import Informatie
 class InformatieAdmin(admin.ModelAdmin):
     pass
 
-admin.site.register(Informatie, InformatieAdmin)
