@@ -91,6 +91,7 @@ def login_view(request):
     else:
         return render(request, 'login.html')
 
+
 def signup_view(request):
     if request.method == 'POST':
         form = UserCreationForm(request.POST)
@@ -101,11 +102,9 @@ def signup_view(request):
     else:
         form = UserCreationForm()
     return render(request, 'signup.html', {'form': form})
+
+
 def logout_view(request):
     logout(request)
-    return render (request, 'login.html')
+    return render(request, 'index.html', {'message1': 'You are logged out'})
 
-# class RegistrationForm(forms.ModelForm):
-#     class Meta:
-#         model = User
-#         fields = ('username', 'password')
