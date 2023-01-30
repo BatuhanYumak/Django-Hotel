@@ -10,11 +10,6 @@
     <form method="post" action="{% url 'signup' %}">
         {% csrf_token %}
         {{ form.as_p }}
-        {% comment %} <label for="username">Gebruikersnaam:</label>
-        <input type="text" name="username" required>
-        <br>
-        <label for="password">Wachtwoord:</label>
-        <input type="password" name="password" required> {% endcomment %}
         <br>
         <br>
         <button type="submit">Account aanmaken</button>

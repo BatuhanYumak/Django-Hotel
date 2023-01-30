@@ -73,7 +73,7 @@ def index(request):
         del request.session['message']
     return render(request, 'index.html', {'message': message})
 
-
+# Hier check hiij code of  het overeenkomt met de gebruiker zijn inglog gevens die opgeslagen is in het database
 def login_view(request):
     if request.method == 'POST':
         username = request.POST.get('username')
@@ -91,7 +91,7 @@ def login_view(request):
     else:
         return render(request, 'login.html')
 
-
+# Hier verstuur de data van de gebruiker naar de database na dat hij/zij een account heef gemaakt word diegene verstuurd naar de login pagina
 def signup_view(request):
     if request.method == 'POST':
         form = UserCreationForm(request.POST)
@@ -103,7 +103,7 @@ def signup_view(request):
         form = UserCreationForm()
     return render(request, 'signup.html', {'form': form})
 
-
+# logout functie
 def logout_view(request):
     logout(request)
     return render(request, 'index.html', {'message1': 'You are logged out'})
