@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="{% static 'style.css' %}" />
   </head>
 
-<body>
+<body class="bg-gray-50 dark:bg-gray-900">
     <!--Navbar-->
     <nav class="bg-white px-2 sm:px-4 py-2.5 dark:bg-white-900  w-full z-20 top-0 left-0 border-b border-white-200 dark:border-white-600">
         <div class="container flex flex-wrap items-center justify-between mx-auto">
@@ -36,42 +36,42 @@
    
       
       
-      <table>
+      <table >
         <tr>
-          <th>Hotels</th>
-          <th>Detail</th>
+          <th><p class="text-white">Hotel</p></th>
+          <th><p class="text-white">Details</p></th>
         </tr>
         <tr>
-          <td>Amsterdam</td>
-          <td><a href="{% url 'ams' %}">Bekijk hier </td>
+          <td><p class="text-white">Amsterdam</p></td>
+          <td><a class="text-white" href="{% url 'ams' %}">Bekijk hier </td>
         
         </tr>
         <tr>
-          <td>Antwerpen</td>
-          <td><a href="{% url 'antw' %}">Bekijk hier</td>
+          <td><p class="text-white">Antwerpen</p> </td>
+          <td><a class="text-white" href="{% url 'antw' %}">Bekijk hier</td>
         </tr>
         <tr>
-          <td>Athene</td>
-          <td><a href="{% url 'ath' %}">Bekijk hier</td>
+          <td><p class="text-white">Athene</p></td>
+          <td><a class="text-white" href="{% url 'ath' %}">Bekijk hier</td>
         </tr>
         <tr>
-          <td>Bangkok</td>
-          <td><a href="{% url 'bak' %}">Bekijk hier</td>
+          <td><p class="text-white">Bangkok</p></td>
+          <td><a class="text-white" href="{% url 'bak' %}">Bekijk hier</td>
         </tr>
         <tr>
-          <td>Barcelona</td>
-          <td><a href="{% url 'bar' %}">Bekijk hier</td>
+          <td><p class="text-white">Barcelona</p></td>
+          <td><a class="text-white" href="{% url 'bar' %}">Bekijk hier</td>
 
         </tr>
         <tr>
-          <td>Berlijn</td>
-          <td><a href="{% url 'ber' %}">Bekijk hier</td>
+          <td><p class="text-white">Berlijn</p></td>
+          <td><a class="text-white" href="{% url 'ber' %}">Bekijk hier</td>
           </tr>
       </table>
 
     
       <!--Footer-->
-            <footer class="text-center lg:text-left blueDarker text-white">
+            <footer class="text-center lg:text-left blueDarker  text-white bg-gray-50 dark:bg-gray-900"">
       
               <div class="mx-6 py-10 text-center md:text-left">
                   <div class="grid grid-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

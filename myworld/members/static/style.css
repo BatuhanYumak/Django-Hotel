@@ -23,14 +23,14 @@ table {
   }
   
   td, th {
-    border: 20px solid #0077B6;
+    border: 20px solid;
     text-align: left;
     padding: 8px;
   }
-  
+/*   
   tr:nth-child(even) {
-    background-color: #0077B6;
-  }
+ 
+  } */
 .ams {
   border-style: dotted;
 }
