@@ -14,7 +14,6 @@
   </head>
   <body class="bg-gray-50 dark:bg-gray-900">
     <!--Navabr-->
-
     <h1 class="text-white">{{ message }}</h1>
     <h1 class="text-white">{{ message1 }}</h1>
 
@@ -124,7 +123,7 @@
               <li>
                 <a
                   href="{% url 'login' %}"
-                  class="block py-2  pl-3 pr-4 text-white bg-white-700 rounded md:bg-transparent md:p-0 dark:text-white"
+                  class="block py-2 pl-3 pr-4 text-white bg-white-700 rounded md:bg-transparent md:p-0 dark:text-white"
                   aria-current="page"
                   >Log in</a
                 >
@@ -147,29 +146,123 @@
     <h1 class="font-bold text-center text-3xl p-2 text-white">Hotel</h1>
     <div class="typeText text-center text-white"></div>
 
-    <div
-      id="text_writer"
-      class="text-center text-wrap p-4"
-      class="typeText"
-    ></div>
-
-    <div id="ibis">
-      <img id="hotel1" src="{% static 'ibis.png' %}" />
-      <div class="top-left">
-        Bespaar nu 15% of meer als je boekt verblijf voor 31 maart 2023
+    <div id="default-carousel" class="relative" data-carousel="static">
+      <!-- Carousel wrapper -->
+      <div class="relative h-56 overflow-hidden m-auto rounded-lg md:h-96 max-w-lg">
+        <!-- Item 1 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+          <span
+            class="absolute text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 sm:text-3xl dark:text-gray-800"
+            >First Slide</span
+          >
+          <img
+            src="{% static 'Ibis.jpeg' %}"
+            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+            alt="..."
+          />
+        </div>
+        <!-- Item 2 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+          <img
+            src="{% static 'Ibis.png' %}"
+            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+            alt="..."
+          />
+        </div>
+        <!-- Item 3 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+          <img
+            src="{% static 'Ibis.png' %}"
+            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+            alt="..."
+          />
+        </div>
       </div>
-      <div class="bottom-left">
+      <!-- Slider indicators -->
+      <div
+        class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2"
+      >
         <button
-          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
           type="button"
-        >
-          Boek nu!
-        </button>
+          class="w-3 h-3 rounded-full"
+          aria-current="false"
+          aria-label="Slide 1"
+          data-carousel-slide-to="0"
+        ></button>
+        <button
+          type="button"
+          class="w-3 h-3 rounded-full"
+          aria-current="false"
+          aria-label="Slide 2"
+          data-carousel-slide-to="1"
+        ></button>
+        <button
+          type="button"
+          class="w-3 h-3 rounded-full"
+          aria-current="false"
+          aria-label="Slide 3"
+          data-carousel-slide-to="2"
+        ></button>
       </div>
+      <!-- Slider controls -->
+      <button
+        type="button"
+        class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+        data-carousel-prev
+      >
+        <span
+          class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+        >
+          <svg
+            aria-hidden="true"
+            class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M15 19l-7-7 7-7"
+            ></path>
+          </svg>
+          <span class="sr-only">Previous</span>
+        </span>
+      </button>
+      <button
+        type="button"
+        class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+        data-carousel-next
+      >
+        <span
+          class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+        >
+          <svg
+            aria-hidden="true"
+            class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M9 5l7 7-7 7"
+            ></path>
+          </svg>
+          <span class="sr-only">Next</span>
+        </span>
+      </button>
     </div>
 
     <!--Footer-->
-    <footer class="text-center lg:text-left blueDarker text-white bg-gray-50 dark:bg-gray-900">
+    <footer
+      class="text-center lg:text-left blueDarker text-white bg-gray-50 dark:bg-gray-900"
+    >
       <div class="mx-6 py-10 text-center md:text-left">
         <div class="grid grid-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div class="">
