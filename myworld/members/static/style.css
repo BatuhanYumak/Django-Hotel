@@ -1,4 +1,4 @@
-footer {
+ footer {
     bottom: 0;
     position: absolute;
 }
@@ -26,12 +26,12 @@ table {
     border: 20px solid;
     text-align: left;
     padding: 8px;
-  }
-/*   
+  } */
+  
   tr:nth-child(even) {
  
   } */
-.ams {
+ .ams {
   border-style: dotted;
 }
 
@@ -55,6 +55,6 @@ table {
   position: absolute;
   top: 440px;
   left: 150px;
-}
+} 
 
 
