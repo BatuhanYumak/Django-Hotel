@@ -32,14 +32,26 @@
         </div>
         </div>
       </nav>
- 
+
+      <div class="flex flex-wrap w-auto">
+        {% for test in berlijn%}
+        <div class="h-full w-auto border  border-gray-700 px-2 m-4 hover:bg-sky-400 font-bold">
+            <h1 class="">Hotel: {{test.hotel_name}}</h1>
+      </div>
+        {% endfor %}
+    </div>
+
+{% comment %}  
       <div class="flex justify-center  space-x-4 border-dotted border-2">
         
         {% for test in berlijn %}
+        <div class="h-full w-auto border  border-gray-700 px-2 m-4 hover:bg-sky-400 font-bold">
+            <h1 class="">Hotel: {{test.hotel_name}}</h1>
+        </div>
         <h1>{{test.hotel_name}}</h1>
         <h1></h1>
         {% endfor %}
-      </div>
+      </div> {% endcomment %}
       {% comment %} Footer {% endcomment %}
 
 

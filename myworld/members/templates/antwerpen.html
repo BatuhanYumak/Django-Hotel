@@ -34,12 +34,13 @@
         </div>
       </nav>
  
-      <div class="flex justify-center -x-4 border-dotted border-2  columns-xl	">
-        {% for test in antwerpen %}
-        <p>{{test.hotel_name}}</p>
-        <h1></h1>
-        {% endfor %}
+      <div class="flex flex-wrap w-auto">
+        {% for test in antwerpen%}
+        <div class="h-full w-auto border  border-gray-700 px-2 m-4 hover:bg-sky-400 font-bold">
+            <h1 class="">Hotel: {{test.hotel_name}}</h1>
       </div>
+        {% endfor %}
+    </div>
       {% comment %} Footer {% endcomment %}
 <footer class="text-center lg:text-left blueDarker text-white  bg-gray-50 dark:bg-gray-900">
 
