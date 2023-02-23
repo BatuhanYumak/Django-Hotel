@@ -8,5 +8,7 @@ class UserCreationForm(UserCreationForm):
         fields = ('username', 'password')
         widgets = {
             'username': forms.TextInput(attrs={'class': 'form-control'}),
-            'password':     forms.PasswordInput(attrs={'class': 'form-control'}),
-        }
+            'password': forms.CharField(attrs={'class': 'form-control bg-pink-200 border border-pink-400'})
+            
+        } 
+        
